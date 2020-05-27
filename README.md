@@ -12,11 +12,17 @@ than type `npm start`
 
 `{
     "author": "Minecodes.Bot",
+    
     "url": "https://github.com/Minecodes/Minecodes.Bot",
+    
     "avatar": "https://minecraft3.neocities.org/tp.png",
+    
     "prefix": "!",
+    
     "color": "0xecf0f1",
+    
     "token": "BotToken"
+    
 }`
 
 ### Support or Contact
