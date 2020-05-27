@@ -10,7 +10,8 @@ than type `npm start`
 
 ## Config
 
-`{
+`
+{
     "author": "Minecodes.Bot",
     
     "url": "https://github.com/Minecodes/Minecodes.Bot",
@@ -23,7 +24,8 @@ than type `npm start`
     
     "token": "BotToken"
     
-}`
+}
+`
 
 ### Support or Contact
 
