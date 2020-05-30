@@ -17,6 +17,16 @@ client.once("disconnect", () => {
     console.log("Disconnect!");
 });
 
+const COLORS = {
+  error: 0xe74c3c,
+  info: 0x2ecc71,
+  blue: 0x3498db,
+  orange: 0xe67e22,
+  white: 0xecf0f1,
+  yellow: 0xf1c40f,
+  dark: 0x2c3e50
+}
+
 const queue = new Map();
 
 client.on("message", async message => {
@@ -254,7 +264,8 @@ client.on('message', message => {
           .addFields(
             { name: 'help', value: 'to become help' },
             { name: 'hi', value: 'to say hi to the bot' },
-            { name: 'info', value: 'gives information of the server' }
+            { name: 'info', value: 'gives information of the server' },
+            { name: 'say', value: 'let the bot say what you want' }
           )
         message.channel.send(embed);
      }
@@ -323,9 +334,9 @@ client.on('message', message => {
     console.log('Someone use ' + config.prefix + 'creator yay :)'.green);
     const embed = new Discord.MessageEmbed()
       .setTitle('TPBot created bye Minecodes#1043')
-      .setColor(COLORS.white)
+      .setColor(config.color)
       .setDescription('')
-      .setAuthor('TPBot', 'https://minecraft3.neocities.org/tp.png', 'https://www.youtube.com/channel/UCxt0A5bz_CCSDMoFiYQdWNQ')
+      .setAuthor(config.author, config.avatar, config.url)
       .addFields(
         { name: 'Creator:', value: 'Minecodes#1043' },
         { name: 'YouTube Channel:', value: 'https://www.youtube.com/channel/UCxt0A5bz_CCSDMoFiYQdWNQ' }
@@ -341,9 +352,9 @@ client.on('message', message => {
     console.log('Someone use ' + config.prefix + 'info');
 		const embed = new Discord.MessageEmbed()
       .setTitle('Serverinfo')
-      .setColor(COLORS.white)
+      .setColor(config.color)
       .setDescription('')
-      .setAuthor('TPBot', 'https://minecraft3.neocities.org/tp.png', 'https://www.youtube.com/channel/UCxt0A5bz_CCSDMoFiYQdWNQ')
+      .setAuthor(config.author, config.avatar, config.url)
       .addFields(
         { name: 'Name:', value: `${message.guild.name}`, inline: true },
         { name: 'Member: ', value: `${message.guild.memberCount}`, inline:true },
@@ -361,7 +372,7 @@ client.on('message', message => {
     message.channel.send(`${message.author} says`);
     const embed = new Discord.MessageEmbed()
       .setTitle('Call Pizza')
-      .setDescription('https://pizza.de/ (https://commons.wikimedia.org/wiki/File:Pizza_Napoli.jpg), „Pizza Napoli“, https://creativecommons.org/licenses/by-sa/4.0/legalcode')
+      .setDescription('https://pizza.de/ (https://commons.wikimedia.org/wiki/File:Pizza_Napoli.jpg), �Pizza Napoli�, https://creativecommons.org/licenses/by-sa/4.0/legalcode')
       .setColor(config.color)
       .setImage('https://upload.wikimedia.org/wikipedia/commons/b/b8/Pizza_Napoli.jpg')
     message.channel.send(embed);
