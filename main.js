@@ -339,7 +339,8 @@ client.on('message', message => {
       .setAuthor(config.author, config.avatar, config.url)
       .addFields(
         { name: 'Creator:', value: 'Minecodes#1043' },
-        { name: 'YouTube Channel:', value: 'https://www.youtube.com/channel/UCxt0A5bz_CCSDMoFiYQdWNQ' }
+        { name: 'YouTube Channel:', value: 'https://www.youtube.com/channel/UCxt0A5bz_CCSDMoFiYQdWNQ' },
+	{ name: 'Github:', value: 'https://github.com/Minecodes/Minecodes.Bot/' }
       )
     message.channel.send(embed);
   } else if (command === 'avatar') {
